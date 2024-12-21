@@ -1,0 +1,41 @@
+#Dockerfile
+FROM openjdk:latest
+WORKDIR /app
+COPY . /app
+RUN javac Add.java
+CMD ["java","Add"]
+
+
+
+
+vi file
+vi dockerfile
+docker build -t dockerfile .   #dockerfile name should be same as previous cmds
+docker images   #check buid is succeful or not
+docker run -it dockerfile
+
+
+
+\\wsl.localhost\Ubuntu\home\cdac
+
+#Git 
+git clone repo link
+cd repo
+git add .
+git commit -m "anymsg"
+git push -u origin main
+
+
+go to cmd
+wsl --install     \\to start wsl ||linux
+start writing programs
+
+
+#shell scripting 
+file path ==  \\wsl.localhost\Ubuntu\home\cdac
+
+vi filename
+bash filename     \\to execute and run   
+OR
+chmod +x filename    \\to change file permission 
+and ./ filename    \\to execute 
