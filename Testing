@@ -1,0 +1,40 @@
+project right click-> build path->configure->libraries->
+add external jars-> seslect selenium jar (extracted folder)ctrl+A
+open->apply and close
+remove junit dependency from pom.xml
+delete junit class from src/test an add class 
+
+add following code
+package CdacTest.testingpr;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class AppTest {
+	
+public static void main(String[] args) {
+	 WebDriver driver = new ChromeDriver();
+     
+     driver.get("https://artoftesting.com/samplesiteforselenium");
+     driver.findElement(By.cssSelector("div#commonWebElements p ")).click();
+     
+     driver.findElement(By.id("fname")).sendKeys("Hello from testers");
+     
+     driver.findElement(By.id("idOfButton")).click();
+     WebElement element= driver.findElement(By.id("dblClkBtn"));
+     Actions actions= new Actions(driver);
+  
+     actions.doubleClick(element).perform();
+     
+     driver.switchTo().alert().accept();
+     
+     driver.findElement(By.id("female")).click();
+     
+     driver.findElement(By.className("Automation")).click();
+     driver.findElement(By.className("Performance")).click();
+     
+}
+}
